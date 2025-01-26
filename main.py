@@ -6,9 +6,9 @@ Given a string text, return true if it is a palindrome, or false otherwise.
 For this question, letters are NOT case-sensitive, for example, "LEVeL" is a palindrome.
 """
 # Change this function so it works correctly
-def is_palindrome(text):
-    return False
-
+def is_palindrome(s:str) -> bool:
+    processed_text = [c for c in s.upper() if c.isalnum()]
+    return processed_text == processed_text[::-1]
 
 if __name__ == '__main__':
     test_cases = [('level', True),
